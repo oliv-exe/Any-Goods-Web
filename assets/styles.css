@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /* HEADER */
@@ -36,10 +37,20 @@ header .right {
 
 .right a {
     font-family: 'Lilita One';
-    font-size: 1.25rem;
+    font-size: 1.1vw;
     color: #111111;
     margin: auto 0 auto 0;
     text-decoration: none;
+}
+
+.right .bar {
+    width: 10vw;
+    height: 4px;
+    background-color: #11111100;
+    position: absolute;
+    margin-top: 10vh;
+    right: 33.5vw;
+    transition: ease-in-out 0.4s;
 }
 
 /* MAIN */
@@ -122,7 +133,7 @@ header .right {
 #qui-sommes-nous {
     height: 50vh;
     width: 100%;
-    background-color: rgb(223, 223, 172);
+    /* background-color: rgb(223, 223, 172); */
     margin-top: 10vh;
 }
 
@@ -151,4 +162,27 @@ footer {
     width: 100%;
     background-color: rgb(172, 223, 197);
     margin-top: 10vh;
+}
+
+.arrow {
+    display: none;
+    position: fixed;
+    bottom: 5vh;
+    right: 5vh;
+    width: 2.5vw;
+    height: 2.5vw;
+    overflow: hidden;
+    background-color: #125C34;
+    border-radius: 25%;
+}
+
+.arrow:hover {
+    animation: pulse 1s;
+}
+
+.arrow img {
+    object-fit: cover;
+    width: 75%;
+    height: 75%;
+    margin: 0.25vw;
 }

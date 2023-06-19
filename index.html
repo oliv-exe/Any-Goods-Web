@@ -5,30 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛒</text></svg>">
-    <link rel="stylesheet" type="text/css" href="assets/styles.css" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+    <link rel="stylesheet" type="text/css" href="assets/styles.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Any Goods - New York</title>
 </head>
 <body>
 
-<header>
+<header id="acceuil">
     <div class="left">
-        <a>
+        <a href="#acceuil">
             <img src="images/AnyGoodsLogo.png">
         </a>
     </div>
     <div class="right">
-        <a href="#qui-sommes-nous">
+        <a class="qsn" href="#qui-sommes-nous">
             Qui sommes nous
         </a>
-        <a href="#nous-rejoindre">
+        <a class="nr" href="#nous-rejoindre">
             Nous rejoindre
         </a>
-        <a href="#nos-effectifs">
+        <a class="ne" href="#nos-effectifs">
             Nos effectifs
         </a>
+        <div class="bar"></div>
     </div>
 </header>
+
+<div class="arrow">
+    <a href="#acceuil"><img src="images/arrow-up.png"></a>
+</div>
 
 <main>
     <div id="home">
@@ -71,6 +76,8 @@
 <footer>
 
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
