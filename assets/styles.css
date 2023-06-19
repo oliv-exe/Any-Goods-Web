@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .left {
+    height: 100%;
+    margin-left: 8vw;
+    overflow-y: hidden;
+}
+
+header img {
+    height: 15vh;
+    cursor: pointer;
+}
+
+header .right {
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.right a {
+    font-family: 'Lilita One';
+    font-size: 1.25rem;
+    color: #111111;
+    margin: auto 0 auto 0;
+    text-decoration: none;
+}
+
+/* MAIN */
+
+/* HOME */
+
+#home {
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#home .title {
+    margin-left: 8vw;
+    width: 50%;
+    height: 50%;
+    font-family: 'Lilita One';
+    color: #111111;
+}
+
+#home p {
+    margin-top: 5vh;
+    font-size: 1.25vw;
+    line-height: 3.5vh;
+}
+
+#home p b {
+    font-style: italic;
+
+    color: #9d2424;
+}
+
+.name {
+    font-size: 2.5vw;
+}
+
+.name b {
+    font-size: 3.5vw;
+    color: #9d2424;
+    font-style: italic;
+    margin-right: 1vw;
+}
+
+.name span {
+    background-color: #125C34;
+}
+
+.slogan {
+    font-size: 3rem;
+    font-style: italic;
+}
+
+.illustration {
+    width: 30vw;
+    height: 30vw;
+    position: absolute;
+    overflow: hidden;
+    right: 8vw;
+}
+
+.illustration img {
+    object-fit: cover;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+#home svg {
+    position: absolute;
+    margin: 55vh 0 0 63vw;
+    height: 110vh;
+    width: 100vw;
+    z-index: -1;
+}
+
+/* QUI SOMMES NOUS */
+
+#qui-sommes-nous {
+    height: 50vh;
+    width: 100%;
+    background-color: rgb(223, 223, 172);
+    margin-top: 10vh;
+}
+
+/* NOUS REJOINDRE */
+
+#nous-rejoindre {
+    height: 50vh;
+    width: 100%;
+    background-color: rgb(174, 172, 223);
+    margin-top: 10vh;
+}
+
+/* NOS EFFECTIFS */
+
+#nos-effectifs {
+    height: 90vh;
+    width: 100%;
+    background-color: rgb(223, 172, 172);
+    margin-top: 10vh;
+}
+
+/* FOOTER */
+
+footer {
+    height: 25vh;
+    width: 100%;
+    background-color: rgb(172, 223, 197);
+    margin-top: 10vh;
+}
