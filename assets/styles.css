@@ -45,7 +45,7 @@ header .right {
 
 .right .bar {
     width: 10vw;
-    height: 4px;
+    height: 0.4vh;
     background-color: #11111100;
     position: absolute;
     margin-top: 10vh;
@@ -105,7 +105,7 @@ header .right {
     font-style: italic;
 }
 
-.illustration {
+#home .illustration {
     width: 30vw;
     height: 30vw;
     position: absolute;
@@ -113,7 +113,7 @@ header .right {
     right: 8vw;
 }
 
-.illustration img {
+#home .illustration img {
     object-fit: cover;
     border-radius: 50%;
     width: 100%;
@@ -131,10 +131,45 @@ header .right {
 /* QUI SOMMES NOUS */
 
 #qui-sommes-nous {
-    height: 50vh;
+    height: 100vh;
     width: 100%;
-    /* background-color: rgb(223, 223, 172); */
-    margin-top: 10vh;
+    overflow-y: hidden;
+}
+
+#qui-sommes-nous .illustration {
+    width: 40vw;
+    height: 40vw;
+    top: 109vh;
+    position: absolute;
+    overflow: hidden;
+    right: -5vw;
+}
+
+#qui-sommes-nous .illustration img {
+    object-fit: cover;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+#qui-sommes-nous .title {
+    margin-top: 30vh;
+    margin-left: 8vw;
+    width: 50%;
+    height: 100%;
+    font-family: 'Lilita One';
+    color: #111111;
+}
+
+#qui-sommes-nous p {
+    margin-top: 5vh;
+    font-size: 1.25vw;
+    line-height: 3.5vh;
+}
+
+#qui-sommes-nous p b {
+    font-style: italic;
+    color: #9d2424;
 }
 
 /* NOUS REJOINDRE */
@@ -143,7 +178,7 @@ header .right {
     height: 50vh;
     width: 100%;
     background-color: rgb(174, 172, 223);
-    margin-top: 10vh;
+    margin-top: 100vh;
 }
 
 /* NOS EFFECTIFS */
@@ -174,6 +209,7 @@ footer {
     overflow: hidden;
     background-color: #125C34;
     border-radius: 25%;
+    z-index: 5;
 }
 
 .arrow:hover {
@@ -185,4 +221,73 @@ footer {
     width: 75%;
     height: 75%;
     margin: 0.25vw;
+}
+
+/* NOISE */
+
+.noise::before {
+    content: "";
+    position: fixed;
+    left: -10rem;
+    z-index: 9999;
+    top: -10rem;
+    width: calc(100% + 20rem);
+    height: calc(100% + 20rem);
+    background-image: url(../images/noise.png);
+    background-size: 10%;
+    opacity: 0.65;
+    pointer-events: none;
+    animation: noise 1s steps(2) infinite;
+}
+
+@-webkit-keyframes noise {
+  to {
+    transform: translate3d(-7rem, 0, 0);
+  }
+}
+
+@keyframes noise {
+  0% {
+    transform: translate3d(0, 9rem, 0);
+  }
+
+  10% {
+    transform: translate3d(-1rem, -4rem, 0);
+  }
+
+  20% {
+    transform: translate3d(-8rem, 2rem, 0);
+  }
+
+  30% {
+    transform: translate3d(9rem, -9rem, 0);
+  }
+
+  40% {
+    transform: translate3d(-2rem, 7rem, 0);
+  }
+
+  50% {
+    transform: translate3d(-9rem, -4rem, 0);
+  }
+
+  60% {
+    transform: translate3d(2rem, 6rem, 0);
+  }
+
+  70% {
+    transform: translate3d(7rem, -8rem, 0);
+  }
+
+  80% {
+    transform: translate3d(-9rem, 1rem, 0);
+  }
+
+  90% {
+    transform: translate3d(6rem, -5rem, 0);
+  }
+
+  to {
+    transform: translate3d(-7rem, 0, 0);
+  }
 }
