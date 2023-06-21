@@ -4,8 +4,8 @@
 * {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* HEADER */
@@ -97,7 +97,7 @@ header .right {
 }
 
 .slogan {
-    font-size: 3rem;
+    font-size: 2.5vw;
     font-style: italic;
 }
 
@@ -171,9 +171,59 @@ header .right {
 /* NOUS REJOINDRE */
 
 #nous-rejoindre {
-    height: 50vh;
+    height: 100vh;
     width: 100%;
-    background-color: rgb(174, 172, 223);
+    overflow-y: hidden;
+    display: flex;
+}
+
+#nous-rejoindre .title {
+    margin-top: 30vh;
+    margin-left: 8vw;
+    width: 50%;
+    height: 100%;
+    font-family: 'Lilita One';
+    color: #111111;
+}
+
+#nous-rejoindre p {
+    margin-top: 5vh;
+    font-size: 1.25vw;
+    line-height: 3.5vh;
+}
+
+#nous-rejoindre p b {
+    font-style: italic;
+    color: #9d2424;
+}
+
+#nous-rejoindre .boutons {
+    margin: auto;
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#nous-rejoindre button {
+    color: #f5f5f5;
+    background-color: #125C34;
+    font-family: 'Lilita One';
+    font-size: 2vw;
+    width: 15vw;
+    height: 8vh;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    transform:matrix(1.00,0.00,-0.20,1.00,0,0);
+    -ms-transform:matrix(1.00,0.00,-0.20,1.00,0,0);
+    -webkit-transform:matrix(1.00,0.00,-0.20,1.00,0,0);
+    margin: 2vw;
+    transition: ease-in-out 0.2s;
+}
+
+#nous-rejoindre button:hover {
+    color: #125C34;
+    background-color: #00000000;
 }
 
 /* NOS EFFECTIFS */
@@ -251,14 +301,62 @@ header .right {
 footer {
     height: 25vh;
     width: 100%;
-    background-color: rgb(172, 223, 197);
-    margin-top: 10vh;
+    display: flex;
+    overflow: hidden;
+    font-family: 'Lilita One';
 }
+
+footer .title {
+    margin-top: 6vh;
+    margin-left: 8vw;
+    width: 25%;
+    height: 100%;
+    color: #111111;
+    margin-right: 10vw;
+}
+
+footer .name {
+    font-size: 1.25vw;
+}
+
+footer .name b {
+    font-size: 1.75vw;
+    color: #9d2424;
+    font-style: italic;
+    margin-right: 0.5vw;
+}
+
+footer .slogan {
+    font-size: 1.25vw;
+    font-style: italic;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    font-size: 1.1vw;
+    border-left: #9d2424 solid 0.2vw;
+    height: min-content;
+    margin: auto;
+    transform:matrix(1.00,0.00,-0.20,1.00,0,0);
+    -ms-transform:matrix(1.00,0.00,-0.20,1.00,0,0);
+    -webkit-transform:matrix(1.00,0.00,-0.20,1.00,0,0);
+}
+
+footer a {
+    margin: 0.5vw;
+    cursor: pointer;
+    color: #111111;
+    text-decoration: none;
+}
+
+/* POPUPS */
 
 .arrow {
     display: none;
     position: fixed;
-    bottom: 5vh;
+    bottom: 12.5vh;
     right: 5vh;
     width: 2.5vw;
     height: 2.5vw;
@@ -279,71 +377,24 @@ footer {
     margin: 0.25vw;
 }
 
-/* NOISE */
-
-.noise::before {
-    content: "";
+.d-link {
     position: fixed;
-    left: -10rem;
-    z-index: 9999;
-    top: -10rem;
-    width: calc(100% + 20rem);
-    height: calc(100% + 20rem);
-    background-image: url(../images/noise.png);
-    background-size: 10%;
-    opacity: 0.65;
-    pointer-events: none;
-    animation: noise 1s steps(2) infinite;
+    bottom: 5vh;
+    right: 5vh;
+    width: 2.5vw;
+    height: 2.5vw;
+    overflow: hidden;
+    background-color: #125C34;
+    border-radius: 25%;
+    z-index: 5;
 }
 
-@-webkit-keyframes noise {
-  to {
-    transform: translate3d(-7rem, 0, 0);
-  }
+.d-link:hover {
+    animation: pulse 1s;
 }
 
-@keyframes noise {
-  0% {
-    transform: translate3d(0, 9rem, 0);
-  }
-
-  10% {
-    transform: translate3d(-1rem, -4rem, 0);
-  }
-
-  20% {
-    transform: translate3d(-8rem, 2rem, 0);
-  }
-
-  30% {
-    transform: translate3d(9rem, -9rem, 0);
-  }
-
-  40% {
-    transform: translate3d(-2rem, 7rem, 0);
-  }
-
-  50% {
-    transform: translate3d(-9rem, -4rem, 0);
-  }
-
-  60% {
-    transform: translate3d(2rem, 6rem, 0);
-  }
-
-  70% {
-    transform: translate3d(7rem, -8rem, 0);
-  }
-
-  80% {
-    transform: translate3d(-9rem, 1rem, 0);
-  }
-
-  90% {
-    transform: translate3d(6rem, -5rem, 0);
-  }
-
-  to {
-    transform: translate3d(-7rem, 0, 0);
-  }
+.d-link img {
+    object-fit: contain;
+    height: 65%;
+    margin: 0.35vw 0 0 0.15vw;
 }
